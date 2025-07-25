@@ -1,0 +1,141 @@
+/* Geral Configuration */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.hidden{
+    display: none;
+}
+.revealed{
+    display: block;
+}
+/* Style guide */
+:root {
+  --color-XL-txt: #636363;
+  --color-SM-txt: #767676;
+  --color-SIM-bg: #b9b9b95e;
+  --color-btn-bg: #df209f;
+  --color-btn-txt: #ffffff;
+  --color-btm-img: #000000;
+
+  --font-Sans: "Open Sans", sans-serif;
+  --font-One: "Poiret One", sans-serif;
+}
+
+/* Style Information box */
+#Information {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  align-items: center;
+  background-color: var(--color-btm-img);
+  background-image: url("../src/assets/Informationbottom.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#Information .top {
+  width: 80%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#Information .top img {
+  width: 150px;
+  object-fit: cover;
+}
+#Information .top button {
+  padding: 4px;
+  width: 150px;
+  height: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--color-SIM-bg);
+  color: var(--color-btn-txt);
+}
+#Information .center {
+  width: 80%;
+  gap: 20px;
+  flex-direction: column;
+  display: flex;
+  color: var(--color-btn-txt);
+}
+#Information .center .box-title {
+  display: flex;
+  gap: 10px;
+}
+#Information .center .box-title .title {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: var(--font-Sans);
+}
+#Information .center .frist {
+  color: var(--color-btn-txt);
+}
+#Information .center .second {
+  color: var(--color-btn-bg);
+}
+#Information .center .description {
+  font-size: 40px;
+  font-family: var(--font-One);
+}
+#Information .center button {
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 14px;
+}
+#Information .center button.from{
+ background-color: var(--color-btn-bg);
+  color: var(--color-btn-txt);
+  border: none;
+}
+#Information .center button.ent {
+  padding: 2px;
+  color: var(--color-btn-txt); 
+  border: 1px solid var(--color-SIM-bg);
+  background-color: black;
+ 
+}
+@media (max-width: 600px) {
+/* Geral configuration */
+    .hidden{
+    display: block;
+}
+.revealed{
+    display: none;
+}
+
+/* Styled Information box */
+#Information .top {
+  width: 80%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}#Information .center {
+  width: 80%;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  color: var(--color-btn-txt);
+}
+#Information .center .box-title .title {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: var(--font-Sans);
+}
+#Information .center .description {
+  font-size: 22px;
+  font-family: var(--font-One);
+}
+}
