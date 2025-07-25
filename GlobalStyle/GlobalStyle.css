@@ -23,6 +23,88 @@
   --font-One: "Poiret One", sans-serif;
 }
 
+
+/* Header configuration */
+header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+header nav{
+  width: 90%;
+  
+  border-bottom: 1px solid var(--color-SIM-bg);
+}
+header nav ul{
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul .left{
+  height: 100%;
+  display: flex;
+  gap: 5%;
+  align-items: center;
+}
+header nav ul .left img{
+  width: 150px;
+  object-fit: cover;
+}
+header nav ul .left .box-title {
+  display: flex;
+  gap: 10px;
+}
+header nav ul .left .box-title .title {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: var(--font-Sans);
+}
+header nav ul .left .box-title .frist {
+  color: var(--color-XL-txt);
+}
+header nav ul .left .box-title .second {
+  color: var(--color-btn-bg);
+}
+
+header nav ul .box-buttons{
+  height: 100%;
+  display: flex;
+  gap: 4%;
+  align-items: center;
+
+}
+header nav ul .box-buttons button {
+  width: 140px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 14px;
+}
+header nav ul .box-buttons button.credt{
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-txt);
+  border: none;
+}
+header nav ul .box-buttons button.profile{
+   padding: 2px;
+  color: var(--color-XL-txt); 
+  background-color: var(--color-btn-txt);
+  border: none;
+}
+header nav ul .box-buttons button.message{
+   padding: 2px;
+  color: var(--color-XL-txt); 
+  background-color: var(--color-btn-txt);
+  border: none;
+}
+
+
+
 /* Style Information box */
 #Information {
   width: 100%;
@@ -104,7 +186,7 @@
   background-color: black;
  
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 /* Geral configuration */
     .hidden{
     display: block;
@@ -112,6 +194,32 @@
 .revealed{
     display: none;
 }
+
+/* Header configuration */
+
+header nav{
+  width: 90%;
+  display: flex;
+  border-bottom: none;
+}
+header nav ul .left img{
+  width: 100px;
+  object-fit: cover;
+}
+header nav ul .left .box-title {
+  display: flex;
+  gap: 10px;
+}
+header nav ul .left .box-title .title {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: var(--font-Sans);
+}
+header nav ul .left .box-title .frist {
+  color: var(--color-btm-img);
+}
+
+
 
 /* Styled Information box */
 #Information .top {
