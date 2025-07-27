@@ -186,6 +186,90 @@ header nav ul .box-buttons button.message{
   background-color: black;
  
 }
+
+/* Home configurations */
+
+#Home{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+
+/* Posts configuraton */
+
+#posts{
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.post{
+  width: 200px;
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
+.post img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.post .informations{
+  font-family: var(--font-Sans);
+  font-weight: bold;
+}
+.post .informations .name{}
+.post .informations .person-inf{
+  color: var(--color-SM-txt); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 700px) {
 /* Geral configuration */
     .hidden{
