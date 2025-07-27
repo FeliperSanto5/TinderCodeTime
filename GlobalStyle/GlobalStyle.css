@@ -404,4 +404,36 @@ header nav ul .left .box-title .frist {
   font-size: 22px;
   font-family: var(--font-One);
 }
+
+body {
+    flex-direction: column;
+    background-color: #000000;
+  }
+
+  .boxone {
+    width: 100%;
+    padding: 30px 20px;
+    align-items: center;
+  }
+
+  .image-side {
+    display: none;
+  }
+
+  .space {
+    width: 100%;
+  }
+
+  .gray {
+    width: 90%;
+  }
+
+  .bg-btn {
+    width: 100%;
+  }
+
+  .create {
+    font-size: 20px;
+  }
 }
+
