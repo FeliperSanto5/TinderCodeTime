@@ -8,34 +8,34 @@ function Users() {
 
   useEffect(() => {
     axios.get('http://localhost:3500/usuarios')
-      .then(res => setUsuarios(res.data))
-      .catch(err => console.error('Erro ao carregar usuários:', err));
+      .then(response => setUsuarios(response.data))
+      .catch(error => console.log('Erro ao buscar usuários:', error));
   }, []);
 
   return (
-    <div className="usuarios-container">
-      <header className="usuarios-header">
-        <div className="menu-icon">☰</div>
-        <h1 className="logo">Tinder <span>CodeTime</span></h1>
-        <div className="header-actions">
-          <button className="btn-creditos">ADQUIRIR CRÉDITOS</button>
-          <span className="header-link">PERFIL</span>
-          <span className="header-link">MENSAGENS</span>
+    <div className="pagina-usuarios">
+      {/* Cabeçalho */}
+      <header className="cabecalho-usuarios">
+        <div className="menu-esquerda">☰</div>
+        <h1 className="titulo-logo">Tinder <span>CodeTime</span></h1>
+        <div className="botoes-topo">
+          <button>ADQUIRIR CRÉDITOS</button>
+          <p>PERFIL</p>
+          <p>MENSAGENS</p>
         </div>
       </header>
 
-      <div className="usuarios-lista">
-        {usuarios.map((user) => (
+      {/* Lista de usuários */}
+      <div className="lista-usuarios">
+        {usuarios.map((usuario) => (
           <div
-            key={user._id}
+            key={usuario._id}
             className="usuario-card"
-            onClick={() => navigate(`/usuarios/${user._id}`)}
+            onClick={() => navigate(`/usuarios/${usuario._id}`)}
           >
-            <img src={user.imagem} alt={user.nome} className="usuario-foto" />
-            <div className="usuario-info">
-              <strong>{user.nome}</strong>
-              <p>{user.idade} - {user.cidade}, {user.pais}</p>
-            </div>
+            <img src={usuario.imagem} alt={usuario.nome} className="foto-usuario" />
+            <strong>{usuario.nome}</strong>
+            <p>{usuario.idade} - {usuario.cidade}, {usuario.pais}</p>
           </div>
         ))}
       </div>

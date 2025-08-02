@@ -273,7 +273,7 @@ body {
 
 /* Botão rosa */
 .bg-btn {
-  background-color: #DF209F;
+  background-color: #ff0084;
   border: none;
   border-radius: 15px;
   padding: 12px;
@@ -308,116 +308,128 @@ body {
   background-position: center;
 }
 
-/* Container geral */
-.usuarios-container {
+/* Estrutura geral da página */
+.pagina-usuarios {
   padding: 20px;
-  height: 100vh;
   background-color: white;
-  background-image: none;
   font-family: Arial, sans-serif;
 }
 
-/* Header */
-.usuarios-header {
-  display: flex;  
-  align-content: center;
+/* Cabeçalho */
+.cabecalho-usuarios {
+  display: flex;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
-.menu-icon {
-  margin-left: 100px;
-  font-size: 50px;
-  color: #d6006b;
+.menu-esquerda {
+  font-size: 40px;
+  margin-left: 120px;
   cursor: pointer;
+  color:#d6006b
 }
 
-.logo {
+.titulo-logo {
   font-size: 40px;
   font-weight: bold;
-  color: #333;
+  color: #767676
 }
 
-.logo span {
-  color: #DF209F
+.titulo-logo span {
+  color: #e91e63;
 }
 
-.header-actions {
+.botoes-topo {
   display: flex;
+  gap: 30px;
   align-items: center;
-  gap: 46px;
-  margin-right: 100px;
+  color: #767676;
+  margin-right: 120PX;
+  font-weight: bold;
 }
 
-.btn-creditos {
-  background-color: #DF209F;
+.botoes-topo button {
+  background-color: #e91e63;
   color: white;
-  width: 200px;
-  height: 50px;
-  padding: 8px 14px;
   border: none;
+  padding: 6px 12px;
   border-radius: 6px;
+  width: 210px;
+  height: 45px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16Px;
-}
-
-.header-link {
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
+  font-size: 18px;
   font-weight: bold;
 }
 
-/* Lista de usuários com flex e wrap */
-.usuarios-lista {
-  background-color: white;
+/* Grade de usuários */
+.lista-usuarios {
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 16px;
+  margin-top: 20px;
   justify-content: flex-start;
 }
 
-/* Card do usuário */
 .usuario-card {
   width: 140px;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+  padding: 10px;
   border-radius: 8px;
-  overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s;
   text-align: center;
+  transition: transform 0.2s;
 }
 
 .usuario-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-.usuario-foto {
+.foto-usuario {
   width: 100%;
   height: 140px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
-.usuario-info {
-  padding: 10px;
-}
-
-.usuario-info strong {
+.usuario-card strong {
   display: block;
+  margin-top: 6px;
   font-size: 14px;
-  color: #111;
 }
 
-.usuario-info p {
+.usuario-card p {
   font-size: 12px;
   color: #666;
 }
 
+/* Responsividade */
+@media (max-width: 700px) {
+  .botoes-topo {
+    display: none;
+  }
+
+  .cabecalho-usuarios {
+    justify-content: space-between;
+        flex-direction: column;
+  }
+
+  .lista-usuarios {
+    justify-content: space-between;
+  }
+
+  .menu-esquerda {
+    margin-left: 0%;
+  }
+
+  .usuario-card {
+    width: 48%;
+  }
+}
 
 
 
