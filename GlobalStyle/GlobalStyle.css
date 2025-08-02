@@ -234,7 +234,6 @@ body {
   background-size:cover;
   display: flex;
   flex-direction: column;
-  color: #ffffff;
 }
 
 .boxone {
@@ -251,6 +250,7 @@ body {
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: bold;
+  color: white;
 }
 
 .space {
@@ -333,6 +333,10 @@ body {
   color:#d6006b
 }
 
+p {
+    cursor: pointer;
+}
+
 .titulo-logo {
   font-size: 40px;
   font-weight: bold;
@@ -367,12 +371,11 @@ body {
 
 /* Grade de usuários */
 .lista-usuarios {
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 20px;
-  justify-content: flex-start;
+  background: none;
 }
 
 .usuario-card {
@@ -415,24 +418,122 @@ body {
 
   .cabecalho-usuarios {
     justify-content: space-between;
-        flex-direction: column;
+    flex-direction: column;
   }
 
-  .lista-usuarios {
-    justify-content: space-between;
+  .lista-usuarios{
+    margin-left: 25px;
   }
 
   .menu-esquerda {
     margin-left: 0%;
   }
 
-  .usuario-card {
-    width: 48%;
-  }
 }
 
 
+.pagina-detalhes {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
+.fundo-usuario {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  position: relative;
+}
+
+.botao-voltar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #e91e63;
+  cursor: pointer;
+}
+
+.caixa-informacoes {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linha-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foto-pequena {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.botoes-info {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.botao {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.rosa {
+  background-color: #e91e63;
+}
+
+.vinho {
+  background-color: #880e4f;
+}
+
+.preta {
+  background-color: #333;
+}
+
+.texto-descricao {
+  margin: 16px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.botao-conversar {
+  width: 100%;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-conversar:hover {
+  background-color: #c2185b;
+}
 
 
 

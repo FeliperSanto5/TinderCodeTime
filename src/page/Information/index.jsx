@@ -14,7 +14,7 @@ export default function Information() {
           <div className="title frist">Tinder</div>
           <div className="title second">CodeTime</div>
         </div>
-        <div className="description">Não basta code, tem que se apaixonar</div>
+        <div className="description">Não basta codar, tem que se apaixonar</div>
         <Link to="/register">
           <button className="from">Cadastre-se</button>
         </Link>

@@ -1,20 +1,45 @@
-import Header from "../../components/Header"
+function UserInfo() {
+  const usuario = {
+    nome: 'Ana Júlia',
+    idade: 32,
+    cidade: 'Ipatinga',
+    pais: 'Brasil',
+    sexo: 'Feminino',
+    estadoCivil: 'Solteira',
+    descricao: 'Adoro conversas significativas, pessoas de sorriso fácil, que curtem a vida e não sejam arrogantes e rudes.',
+    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YnoGQbjU8M0VYO3nEgy2IK6Q2Z47zMeXeQ&s'
+  };
 
-export default function Home(){
-    return(
-       <section id="Home">
-       <Header/>
-       <ul id="posts">
-        <li className="post">
-            <img src="https://i.pinimg.com/736x/90/c0/97/90c097159b9bf2eac99ed4f5a259ca52.jpg" alt="" />
-           <div className="informations">
-            <div className="name">Luiza</div>
-            <div className="person-inf">
-                <p>22. Salvador/Bahia</p>
+  return (
+    <div className="pagina-detalhes">
+      <div
+        className="fundo-usuario"
+        style={{ backgroundImage: `url(${usuario.imagem})` }}
+      >
+        <span className="botao-voltar" onClick={() => alert('Voltar')}>←</span>
+
+        <div className="caixa-informacoes">
+          <div className="linha-topo">
+            <div>
+              <strong>{usuario.nome}</strong>
+              <p>{usuario.idade} - {usuario.cidade}, {usuario.pais}</p>
             </div>
-           </div>
-        </li>
-       </ul>
-       </section>
-    )
+            <img src={usuario.imagem} alt={usuario.nome} className="foto-pequena" />
+          </div>
+
+          <div className="botoes-info">
+            <span className="botao rosa">Sexo: {usuario.sexo}</span>
+            <span className="botao vinho">País: {usuario.pais}</span>
+            <span className="botao preta">{usuario.estadoCivil}</span>
+          </div>
+
+          <p className="texto-descricao">{usuario.descricao}</p>
+
+          <button className="botao-conversar">Conversar</button>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default UserInfo;
