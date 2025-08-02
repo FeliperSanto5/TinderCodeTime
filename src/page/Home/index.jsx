@@ -16,9 +16,8 @@ function UserInfo() {
         className="fundo-usuario"
         style={{ backgroundImage: `url(${usuario.imagem})` }}
       >
-        <Link to="/dashboard">
         <span className="botao-voltar">←</span>
-        </Link>
+
         <div className="caixa-informacoes">
           <div className="linha-topo">
             <div>
