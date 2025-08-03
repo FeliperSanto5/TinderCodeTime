@@ -1,12 +1,24 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
-    nome: '', idade: '', cidade: '', email: '', senha: '',
-    imagem: '', sexo: '', estadoCivil: '', pais: '', descricao: ''
+    nome: "",
+    idade: "",
+    cidade: "",
+    email: "",
+    senha: "",
+    imagem: "",
+    sexo: "",
+    estadoCivil: "",
+    pais: "",
+    descricao: "",
   });
-  const [status, setStatus] = useState('');
+
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,20 +26,53 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('');
+    setStatus("");
+
     try {
-      await axios.post('http://localhost:3500/', form);
-      setStatus('✅ Cadastro realizado com sucesso!');
-      setForm({ nome: '', idade: '', cidade: '', email: '', senha: '', imagem: '', sexo: '', estadoCivil: '', pais: '', descricao: '' });
+      // Envia para o back-end no formato que o Mongo espera
+      await axios.post("http://localhost:3500/", {
+        name: form.nome,
+        year: form.idade,
+        location: form.cidade,
+        country: form.pais,
+        sex: form.sexo,
+        marital_status: form.estadoCivil,
+        description: form.descricao,
+        img_url: form.imagem,
+        // email e senha -> pode adicionar no schema se quiser salvar
+      });
+
+      setStatus("✅ Cadastro realizado com sucesso!");
+
+      // Limpa o formulário
+      setForm({
+        nome: "",
+        idade: "",
+        cidade: "",
+        email: "",
+        senha: "",
+        imagem: "",
+        sexo: "",
+        estadoCivil: "",
+        pais: "",
+        descricao: "",
+      });
+
+      // Redireciona para dashboard após 1 segundo
+      setTimeout(() => {
+        navigate("/usuarios");
+      }, 1000);
+
     } catch (err) {
-      setStatus('❌ Erro ao cadastrar. Tente novamente.');
+      console.error("Erro ao cadastrar:", err);
+      setStatus("❌ Erro ao cadastrar. Tente novamente.");
     }
   };
 
   return (
     <div className="boxone">
-      <h2 className="create">Crie sua conta</h2>
       <form onSubmit={handleSubmit} className="space">
+      <h2 className="create">Crie sua conta</h2>
         {Object.keys(form).map((campo) => (
           <input
             key={campo}
@@ -39,10 +84,8 @@ function Register() {
             className="gray"
           />
         ))}
-        <button
-          type="submit"
-          className="bg-btn"
-        >
+
+        <button type="submit" className="bg-btn">
           Cadastrar-se
         </button>
       </form>

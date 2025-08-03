@@ -211,7 +211,7 @@ header nav ul .box-buttons button.message{
   padding-bottom: 2px;
   display: flex;
   flex-direction: column;
-  background-color: red;
+
 }
 .post img{
   width: 200px;
@@ -226,37 +226,35 @@ header nav ul .box-buttons button.message{
   color: var(--color-SM-txt); 
 }
 
-body {
+.boxone {
+   width: 100%;
+  height: 100hv;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #121212;
   background-image: url('../src/assets/BannerDesktop.png');
-  background-size:cover;
-  display: flex;
-  flex-direction: column;
-}
-
-.boxone {
-  width: 50%;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #121212;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .create {
   text-align: center;
   font-size: 24px;
-  margin-bottom: 30px;
   font-weight: bold;
   color: white;
 }
 
 .space {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 12px;
+ margin: 40px;
+  
 }
 
 .gray {
@@ -272,7 +270,13 @@ body {
 }
 
 /* Botão rosa */
+
+.link{
+  width: 100%;
+  display: flex   ;
+}
 .bg-btn {
+  width: 100%;
   background-color: #ff0084;
   border: none;
   border-radius: 15px;
