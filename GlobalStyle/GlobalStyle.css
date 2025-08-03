@@ -373,8 +373,10 @@ p {
 .lista-usuarios {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
   gap: 16px;
   margin-top: 20px;
+  margin-left: 140px;
   background: none;
 }
 
