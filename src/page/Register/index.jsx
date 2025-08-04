@@ -30,7 +30,7 @@ function Register() {
 
     try {
       // Envia para o back-end no formato que o Mongo espera
-      await axios.post("http://localhost:3500/", {
+      await axios.post("https://back-end-tidercodetime.onrender.com/", {
         name: form.nome,
         year: form.idade,
         location: form.cidade,

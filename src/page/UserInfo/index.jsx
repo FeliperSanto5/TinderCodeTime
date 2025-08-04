@@ -10,7 +10,7 @@ function UserInfo() {
   useEffect(() => {
     const fetchUsuario = async () => {
       try {
-        const response = await axios.get(`http://localhost:3500/${id}`);
+        const response = await axios.get(`https://back-end-tidercodetime.onrender.com/${id}`);
         setUsuario(response.data);
       } catch (error) {
         console.error("Erro ao buscar usuário:", error);
